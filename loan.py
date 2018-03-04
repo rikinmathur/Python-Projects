@@ -101,6 +101,7 @@ def featureEncoder(a, high_card, cutoff = 10):
 
 # Create transformed feature, named transformer_1, from high cardinality feature
 transformer_1 =pd.DataFrame()
+
 # Set up CV so that outcome var won't leak into the feature, fit to train, create for test
 from sklearn.model_selection import StratifiedKFold
 kf = StratifiedKFold(n_splits=5, shuffle=True, random_state=2017)
